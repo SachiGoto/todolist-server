@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do list</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+
+
+    <form action="/task" method="POST">
+        <input type="text" placeholder="task" name="task">
+        <button type="submit">Submit</button>
+      </form>
+    
+    
+    
+    
+    
+  
+    
+    <% for(let i=0; i<task.length; i++) {%>
+       <li class="item">
+        <% if(task[i].completed === true) {%>
+
+        <span class="completed"><%= task[i].task %></span>
+        <% } else { %>
+            <span><%= task[i].task %></span>
+        <% } %>
+        <img class="editBtn" src="/img/pen-to-square-solid.svg" width="20" />
+        <img class="deleteBtn" src="/img/trash-can-solid.svg" width="20" />
+       </li>
+    <%} %>
+    
+ 
+    
+    
+    <script src="/main.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>
+
+

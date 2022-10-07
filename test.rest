@@ -1,0 +1,33 @@
+GET http://localhost:3000/
+
+
+###
+
+POST http://localhost:3000/task
+
+
+Content-Type: application/json
+{
+    "task": "test"
+}
+
+
+###
+DELETE http://localhost:3000/deleteTask/633afe912fa26d007b63ccd1
+
+
+###
+Put http://localhost:3000/markComplete
+Content-Type:application/json
+
+{
+   "_id":"633e0f72f022dabd2d8258e5",
+    "task":"Hello",
+    "completed":true
+
+}
+
+
+
+
+
